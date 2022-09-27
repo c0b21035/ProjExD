@@ -14,8 +14,6 @@ def shutudai(alphabet):
         print(c, end=" ")
     print()
 
-    
-    
     abs_chars = random.sample(all_chars, num_of_abs_chars)
     print("表示文字：", end="")
     for c in all_chars: 
