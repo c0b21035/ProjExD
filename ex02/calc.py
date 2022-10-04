@@ -6,6 +6,13 @@ def click_number(event):
     num = btn["text"]
     #tkm.showinfo(f"{num}",f"{num}のボタンが押されました")
     entry.insert(tk.END,num)
+
+def click_equal(event):
+    eqn = entry.get()
+    res = eval(eqn)
+    entry.delete(0, tk.END)
+    entry.insert(tk.END, res)
+
 root = tk.Tk()
 root.geometry("300x500")
 
@@ -27,4 +34,7 @@ for i, num in enumerate(numbers+operators,1):
     if i%3 == 0:
         r += 1
         c = 0
+btn = tk.Button(root, text=f"=", font=("", 30), width=4, height=2)
+btn.bind("<1>", click_equal)
+btn.grid(row=r, column=c)
 root.mainloop()
