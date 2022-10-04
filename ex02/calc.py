@@ -38,14 +38,10 @@ btn = tk.Button(root, text=f"=", font=("", 30), width=4, height=2)
 btn.bind("<1>", click_equal)
 btn.grid(row=r, column=c)
 
-btn = tk.Button(root,text = 'AC',font=("",30)).place(x=282, y=25, relwidth=0.19, relheight= 0.185)
-btn = tk.Button(root,text = '-',font=("",30)).place(x=282, y=135, relwidth=0.19, relheight= 0.185)
-btn = tk.Button(root,text = 'x',font=("",30)).place(x=282, y=245, relwidth=0.19, relheight= 0.185)
-btn = tk.Button(root,text = '÷',font=("",30)).place(x=282, y=355, relwidth=0.19, relheight= 0.185)
+btn1 = tk.Button(root,text = 'AC',font=("",30)).place(x=282, y=25, relwidth=0.19, relheight= 0.185)
+btn2 = tk.Button(root,text = '-',font=("",30)).place(x=282, y=135, relwidth=0.19, relheight= 0.185)
+btn3 = tk.Button(root,text = 'x',font=("",30)).place(x=282, y=245, relwidth=0.19, relheight= 0.185)
+btn4 = tk.Button(root,text = '÷',font=("",30)).place(x=282, y=355, relwidth=0.19, relheight= 0.185)
 
-btn.bind("<1>", click_number)
-btn.bind("<1>", click_number)
-btn.bind("<1>", click_number)
-btn.bind("<1>", click_number)
 
 root.mainloop()
