@@ -101,7 +101,7 @@ def main():
         vy3 *= tate3
         
         #練習8
-        if kkimg_rct.colliderect(bmimg_rct) == True:
+        if kkimg_rct.colliderect(bmimg_rct) == True: #一つ目のボール
             bakuimg_sfc = pg.image.load("fig/bakuha.gif") #爆発エフェクト
             bakuimg_sfc.set_colorkey((255,255,255))  #周りの色を透過
            # bakuimg_sfc = pg.transform.rotozoom(finimg_sfc, 0, )
@@ -124,7 +124,7 @@ def main():
 
             return 
         
-        if kkimg_rct.colliderect(bmimg2_rct) == True:
+        if kkimg_rct.colliderect(bmimg2_rct) == True: #二つ目のボール
             bakuimg_sfc = pg.image.load("fig/bakuha.gif") #爆発エフェクト
             bakuimg_sfc.set_colorkey((255,255,255))  #周りの色を透過
            # bakuimg_sfc = pg.transform.rotozoom(finimg_sfc, 0, )
@@ -146,7 +146,7 @@ def main():
             pg.time.wait(1300)   #待機時間
             return
 
-        if kkimg_rct.colliderect(bmimg3_rct) == True:
+        if kkimg_rct.colliderect(bmimg3_rct) == True: #三つ目のボール
             bakuimg_sfc = pg.image.load("fig/bakuha.gif") #爆発エフェクト
             bakuimg_sfc.set_colorkey((255,255,255))  #周りの色を透過
            # bakuimg_sfc = pg.transform.rotozoom(finimg_sfc, 0, )
@@ -174,8 +174,8 @@ def main():
 #練習7
 def check_bound(rct, scr_rct):
     """
-    [1] rct: こうかとん or 爆弾のRect
-    [2] scr_rct: スクリーンのRect
+    obj_rct: こうかとん or 爆弾のRect
+    scr_rct: スクリーンのRect
     """
     yoko, tate = +1, +1 #領域内
     if rct.left < scr_rct.left or scr_rct.right < rct.right: #ダメ
@@ -189,7 +189,7 @@ def check_bound(rct, scr_rct):
 
 if __name__ == "__main__":
     clock2 = pg.time.Clock()
-    pg.init()
-    main()
-    pg.quit()
+    pg.init() #初期化
+    main() #ゲームの本体
+    pg.quit() #初期化の解除
     sys.exit()
