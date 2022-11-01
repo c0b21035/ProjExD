@@ -64,7 +64,8 @@ class Bomb:
         self.vx *= yoko
         self.vy *= tate
         self.blit(scr) # =scr.sfc.blit(self.sfc, self.rct)
-        
+
+     
 class Music:
     def __init__(self,BGM):
         pygame.mixer.init(frequency = 44100)    # 初期設定
@@ -151,9 +152,7 @@ def main():
 
         pg.display.update() #練習2
         clock.tick(1000)
-
         # 練習8
-
 
 if __name__ == "__main__":
     pg.init() # 初期化
